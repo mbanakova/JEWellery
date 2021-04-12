@@ -156,7 +156,7 @@
           var height = title.nextElementSibling.scrollHeight;
           title.classList.toggle('active');
           if (title.classList.contains('active')) {
-            title.nextElementSibling.style.maxHeight = height +'px';
+            title.nextElementSibling.style.maxHeight = height + 'px';
           } else {
             title.nextElementSibling.style.maxHeight = 0;
           }
@@ -166,9 +166,13 @@
   }
 })();
 
-'use strict';
+"use strict";
+
 (function () {
-  var swiper = new Swiper('.swiper-container', {
+  /// swiper
+  // import Swiper from "swiper/bundle";
+  // const Swiper = require("swiper/bundle");
+  var swiper = new Swiper(".swiper-container", {
     slidesPerView: 4,
     slidesPerGroup: 4,
     spaceBetween: 30,
@@ -177,44 +181,44 @@
     autoHeight: true,
     watchSlidesVisibility: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
-      renderBulvar: function (index, className) {
-        return '<span class=' + className + '>' + (index + 1) + '</span>';
-      },
+      renderBullet: function renderBullet(index, className) {
+        return "<span class=\"".concat(className, "\">").concat(index + 1, "</span>");
+      }
     },
     lazy: {
-      loadPrevNext: true,
+      loadPrevNext: true
     },
     breakpoints: {
       0: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         pagination: {
-          type: `fraction`,
-          renderFraction(currentClass, totalClass, index, total) {
-            return '<span class=' + currentClass + `"type="button">0 ` + index + '</span> of <span class=' + totalClass + `"type="button">0 ` + total + '</span>';
-          },
-        },
+          type: "fraction",
+          renderFraction: function renderFraction(currentClass, totalClass, index, total) {
+            return "<span class=\"".concat(currentClass, "\" type=\"button\">0").concat(index, "</span> of <span class=\"").concat(totalClass, "\" type=\"button\">0").concat(total, "</span>");
+          }
+        }
       },
       768: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         pagination: {
-          type: `bulvars`,
-        },
+          type: "bullets"
+        }
       },
       1024: {
         slidesPerView: 4,
         slidesPerGroup: 4,
         pagination: {
-          type: `bulvars`,
-        },
-      },
-    },
+          type: "bullets"
+        }
+      }
+    }
   });
 })();
