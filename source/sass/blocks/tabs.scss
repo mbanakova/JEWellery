@@ -1,0 +1,74 @@
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+}
+
+.tabs span {
+  display: none;
+}
+
+.tabs__triggers {
+  @include ul();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.tabs__content {
+  flex-basis: 470px;
+  width: 100%;
+  height: 435px;
+  object-fit: cover;
+  object-position: bottom;
+  overflow: hidden;
+}
+
+@media (max-width: $desktop) {
+  .tabs {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 14px;
+  }
+
+  .tabs__triggers {
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .tabs__prewiev-wrap img {
+    height: 129px;
+  }
+
+  .tabs__content {
+    flex-basis: 319px;
+    max-height: 286px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .tabs {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 14px;
+  }
+
+  .tabs span {
+    @include font(1.4rem, 130%, 500);
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .tabs__triggers {
+    display: none;
+  }
+
+  .tabs__content {
+    max-height: 260px;
+  }
+}

@@ -1,0 +1,220 @@
+.filter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 32px;
+  height: 32px;
+  font-size: 0;
+  border-radius: 50%;
+  background-color: $black;
+  border: none;
+  display: none;
+}
+
+.filter fieldset {
+  padding: 66px 23px 28px;
+  position: relative;
+  border: 1px solid $accent;
+  border-bottom: none;
+
+  &:last-of-type {
+    border-bottom: 1px solid $accent;
+    margin-bottom: 35px;
+    min-height: 150px;
+  }
+}
+
+.filter legend {
+  position: absolute;
+  width: 82%;
+  top: 24px;
+  left: 20px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    right: 0;
+    transform: rotate(-45deg);
+    width: 11px;
+    height: 11px;
+    border-bottom: 2px solid $accent;
+    border-left: 2px solid $accent;
+    transition: 0.1s ease;
+  }
+}
+
+.filter legend.active::after {
+  border: none;
+  border-top: 2px solid $accent;
+  border-right: 2px solid $accent;
+}
+
+.filter__group {
+  @include ul();
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter__item {
+  position: relative;
+}
+
+.filter__item input {
+  appearance: none;
+  position: absolute;
+
+  &:checked + label::before {
+    background-color: $accent;
+  }
+}
+
+.filter__item label {
+  @include font(15px, 15px, 400);
+  position: relative;
+  padding-left: 26px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    border: 1px solid $accent;
+  }
+
+  &:hover {
+    color: $accent;
+    transition: 0.2 ease-in;
+  }
+
+  &:active {
+    color: $grey;
+    transition: 0.2 ease-in;
+  }
+}
+
+.filter__range {
+  position: relative;
+  height: 2px;
+  background-color: $accent;
+}
+
+.filter__range-between {
+  width: 100%;
+  height: 2px;
+  background-color: $accent;
+  margin-bottom: 30px;
+}
+
+.filter__range-button-1,
+.filter__range-button-2 {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $accent;
+  border: none;
+  cursor: pointer;
+}
+
+.filter__range-button-1 {
+  left: 20%;
+}
+
+.filter__range-button-2 {
+  right: 20%;
+}
+
+.filter__range-num {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+  margin: 0 auto;
+}
+
+.filter__range-num span {
+  @include font(14px, 18px, 500);
+  font-family: $poppins;
+  color: $dark;
+}
+
+.filter__range-num input {
+  @include font(14px, 18px, 500);
+  font-family: $poppins;
+  color: $dark;
+  border: none;
+}
+
+.filter button[type="submit"],
+.filter button[type="reset"] {
+  @include font(16px, 130%, 500);
+  padding: 28px;
+  border: none;
+  font-family: $poppins;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 25px;
+  text-align: center;
+  background-color: $accent;
+  color: $white;
+
+  &:hover {
+    background-color: $brown;
+    transition: 0.2 ease-in;
+  }
+
+  &:active {
+    background-color: rgba($accent, 0.7);
+    transition: 0.2 ease-in;
+  }
+}
+
+.filter button[type="reset"] {
+  background-color: $white;
+  color: $accent;
+  border: 1px solid $accent;
+
+  &:hover {
+    background-color: $brown;
+    color: white;
+    transition: 0.2 ease-in;
+  }
+
+  &:active {
+    background-color: rgba($accent, 0.7);
+    transition: 0.2 ease-in;
+  }
+}
+
+@media (max-width: $desktop) {
+  .filter {
+    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
+  }
+
+  .filter fieldset {
+    padding: 70px 25px 28px;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid $accent;
+  }
+}
+
+@media (max-width: $tablet) {
+  & .filter {
+    max-width: 270px;
+  }
+}

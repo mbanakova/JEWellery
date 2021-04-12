@@ -1,0 +1,53 @@
+.card {
+  text-align: center;
+
+  &:hover {
+    color: $accent;
+    transition: 0.2 ease-in;
+  }
+
+  &:active {
+    color: $grey;
+    transition: 0.2 ease-in;
+  }
+}
+
+.card:hover img {
+  border: 1px solid $accent;
+  transition: 0.2 ease-in;
+}
+
+.card__link {
+  @include a();
+  width: 100%;
+}
+
+.card h3 {
+  @include fields();
+  @include font(1.6rem, 130%, 500);
+  margin-bottom: 6px;
+}
+
+.card p {
+  @include fields();
+  @include font(1.4rem, 130%, 700);
+}
+
+.card__img-wrap {
+  width: 100%;
+  height: auto;
+  margin: 0 0 22px;
+}
+
+@media (max-width: $desktop) {
+  .card__img-wrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: $tablet) {
+  .card__img-wrap {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

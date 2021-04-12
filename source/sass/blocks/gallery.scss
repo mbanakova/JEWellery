@@ -1,0 +1,156 @@
+.gallery {
+  margin-bottom: 130px;
+}
+
+.gallery__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery__container h2 {
+  @include font(3.4rem, 130%, 700);
+  @include fields();
+  margin-bottom: 30px;
+  font-family: $cormorant;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.03em;
+}
+
+.gallery__page-link {
+  margin-bottom: 65px;
+}
+
+.gallery__content {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  gap: 16px;
+}
+
+.gallery__list {
+  @include ul();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+
+  &--reversed {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  &:nth-of-type(2) {
+    margin: 0 14px;
+  }
+
+  &:nth-of-type(3) {
+    align-items: flex-start;
+  }
+}
+
+.gallery__img {
+  @include blink();
+}
+
+.gallery__img--large {
+  flex-grow: 1;
+}
+
+.gallery__img--large img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: $desktop) {
+  .gallery {
+    margin-bottom: 80px;
+  }
+
+  .gallery__container h2 {
+    margin-bottom: 20px;
+  }
+
+  .gallery__content {
+    gap: 15px;
+  }
+
+  .gallery__list {
+    gap: 20px;
+
+    &:nth-of-type(2) {
+      margin: 0 5px;
+    }
+
+    &:nth-of-type(3) {
+      align-items: flex-start;
+    }
+  }
+
+  .gallery__img {
+    &--5 {
+      padding-right: 6px;
+    }
+
+    &--6 {
+      padding-left: 6px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .gallery {
+    margin-bottom: 70px;
+  }
+
+  .gallery__page-link {
+    margin-bottom: 51px;
+  }
+
+  .gallery__content {
+    grid-row-gap: 7px;
+    display: grid;
+    grid-template-columns: minmax(130px, 260px) minmax(145px, 290px);
+  }
+
+  .gallery__list {
+    gap: 16px;
+
+    &:nth-of-type(2) {
+      margin: 0 0 6px;
+    }
+
+    &:nth-of-type(3) {
+      display: grid;
+      grid-template-columns: minmax(130px, 260px) minmax(145px, 290px);
+      grid-column: span 2;
+    }
+
+    &:last-of-type {
+      display: none;
+    }
+  }
+
+  .gallery__list:nth-of-type(3) .gallery__img:first-of-type {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+
+  .gallery__list:nth-of-type(3) .gallery__img:last-of-type {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-top: 6px;
+  }
+
+  .gallery__img {
+    &--5 {
+      padding-right: 0;
+    }
+
+    &--6 {
+      padding-left: 0;
+    }
+  }
+}

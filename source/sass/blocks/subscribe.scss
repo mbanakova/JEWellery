@@ -1,0 +1,100 @@
+.subscribe h3 {
+  @include fields();
+  @include font(3.4rem, 130%, 700);
+  margin-bottom: 10px;
+  font-family: $cormorant;
+  letter-spacing: 0.02em;
+}
+
+.subscribe p {
+  @include fields();
+  color: $grey;
+  margin-bottom: 34px;
+}
+
+.subscribe__form {
+  position: relative;
+  border-bottom: 1px solid $white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscribe__form input {
+  @include font(1.4rem, 130%, 500);
+  background-color: transparent;
+  border: none;
+  padding: 10px 30px 10px 0;
+  flex-grow: 1;
+  color: inherit;
+  font-family: $poppins;
+
+  &:focus + label,
+  &:valid + label {
+    transform: translateY(-200%);
+  }
+
+  &::placeholder {
+    color: $grey;
+  }
+}
+
+.subscribe__form button {
+  @include font(1.6rem, 130%, 500);
+  font-family: $poppins;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 10px 0 10px 10px;
+  cursor: pointer;
+
+  &:hover {
+    outline: 1px solid $accent;
+  }
+
+  &:active {
+    color: $grey;
+    transition: 0.2 ease-in;
+  }
+}
+
+.subscribe__form svg {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 12px;
+}
+
+@media (max-width: $desktop) {
+  .subscribe h3 {
+    letter-spacing: 0.03em;
+  }
+
+  .subscribe__form button {
+    padding: 10px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .subscribe h3 {
+    padding-right: 56px;
+    letter-spacing: 0.01em;
+    margin-bottom: 15px;
+  }
+
+  .subscribe p {
+    padding-right: 50px;
+  }
+
+  .subscribe__form input {
+    padding-right: 10px;
+    flex-grow: 0;
+    width: 100%;
+  }
+
+  .subscribe__form button {
+    display: flex;
+    padding-right: 0;
+    word-wrap: none;
+    flex-basis: 180px;
+    align-items: center;
+  }
+}
