@@ -166,13 +166,10 @@
   }
 })();
 
-"use strict";
+'use strict';
 
 (function () {
-  /// swiper
-  // import Swiper from "swiper/bundle";
-  // const Swiper = require("swiper/bundle");
-  var swiper = new Swiper(".swiper-container", {
+  new window.Swiper('.swiper-container', {
     slidesPerView: 4,
     slidesPerGroup: 4,
     spaceBetween: 30,
@@ -181,14 +178,14 @@
     autoHeight: true,
     watchSlidesVisibility: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: '.swiper-pagination',
       clickable: true,
       renderBullet: function renderBullet(index, className) {
-        return "<span class=\"".concat(className, "\">").concat(index + 1, "</span>");
+        return '<span class=\''.concat(className, '\'>').concat(index + 1, '</span>');
       }
     },
     lazy: {
@@ -199,9 +196,9 @@
         slidesPerView: 2,
         slidesPerGroup: 2,
         pagination: {
-          type: "fraction",
+          type: 'fraction',
           renderFraction: function renderFraction(currentClass, totalClass, index, total) {
-            return "<span class=\"".concat(currentClass, "\" type=\"button\">0").concat(index, "</span> of <span class=\"").concat(totalClass, "\" type=\"button\">0").concat(total, "</span>");
+            return '<span class=\''.concat(currentClass, '\' type=\'button\'>0').concat(index, '</span> of <span class=\'').concat(totalClass, '\' type=\'button\'>0').concat(total, '</span>');
           }
         }
       },
@@ -209,14 +206,14 @@
         slidesPerView: 2,
         slidesPerGroup: 2,
         pagination: {
-          type: "bullets"
+          type: 'bullets'
         }
       },
       1024: {
         slidesPerView: 4,
         slidesPerGroup: 4,
         pagination: {
-          type: "bullets"
+          type: 'bullets'
         }
       }
     }

@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var swiper = new Swiper('.swiper-container', {
+  new window.Swiper('.swiper-container', {
     slidesPerView: 4,
     slidesPerGroup: 4,
     spaceBetween: 30,
