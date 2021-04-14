@@ -31,8 +31,10 @@
     });
 
     // закрыть крестиком
-    closeBtn.addEventListener('click', function () {
-      addModal.classList.remove('add--open');
-    });
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        addModal.classList.remove('add--open');
+      });
+    }
   }
 })();

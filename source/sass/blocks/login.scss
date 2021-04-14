@@ -3,13 +3,13 @@
 
   &--open {
     display: block;
-
-    & .login__overlay {
-      opacity: 1;
-      z-index: 999;
-      background-color: rgba($white, 0.5);
-    }
   }
+}
+
+.login--open .login__overlay {
+  opacity: 1;
+  z-index: 999;
+  background-color: rgba($white, 0.5);
 }
 
 .login__overlay {

@@ -1,5 +1,5 @@
 .new {
-  margin-bottom: 176px;
+  margin-bottom: 118px;
 }
 
 .new__container {
@@ -24,7 +24,7 @@
 }
 
 .new__slider {
-  margin-bottom: 22px;
+  margin-bottom: 50px;
 }
 
 .new__inner {
@@ -42,7 +42,7 @@
 
 @media (max-width: $desktop) {
   .new {
-    margin-bottom: 124px;
+    margin-bottom: 65px;
   }
 
   .new__container h2 {
@@ -54,13 +54,13 @@
   }
 
   .new__slider {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: $tablet) {
   .new {
-    margin-bottom: 116px;
+    margin-bottom: 56px;
   }
 
   .new__container h2 {
@@ -72,6 +72,6 @@
   }
 
   .new__slider {
-    margin-bottom: 4px;
+    margin-bottom: 32px;
   }
 }

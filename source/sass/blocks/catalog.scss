@@ -27,10 +27,10 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 35px;
+}
 
-  & img {
-    max-height: 272px;
-  }
+.catalog__list img {
+  max-height: 272px;
 }
 
 .catalog__controls {
@@ -149,11 +149,11 @@
     grid-column-gap: 30px;
     grid-row-gap: 35px;
     margin-bottom: 70px;
+  }
 
-    & img {
-      max-height: 210px;
-      object-fit: cover;
-    }
+  .catalog__list img {
+    max-height: 210px;
+    object-fit: cover;
   }
 
   .catalog__controls {

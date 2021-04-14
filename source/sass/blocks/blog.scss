@@ -155,9 +155,9 @@
     margin-bottom: 54px;
   }
 
-  & .blog__item,
-  & .blog__item:nth-of-type(3n),
-  & .blog__item:nth-of-type(even) {
+  .blog__item,
+  .blog__item:nth-of-type(3n),
+  .blog__item:nth-of-type(even) {
     flex-direction: column;
   }
 

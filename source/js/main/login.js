@@ -53,9 +53,11 @@
     });
 
     // закрыть крестиком
-    closeBtn.addEventListener('click', function () {
-      loginModal.classList.remove('login--open');
-    });
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        loginModal.classList.remove('login--open');
+      });
+    }
 
     // запись email при отправке
     if (loginForm) {

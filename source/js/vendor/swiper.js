@@ -10,8 +10,6 @@
  * Released on: April 9, 2021
  */
 
-/* eslint-disable */
-
 "use strict";
 
 (function (global, factory) {

@@ -31,9 +31,11 @@
     });
 
     // закрыть крестиком
-    closeBtn.addEventListener('click', function () {
-      addModal.classList.remove('add--open');
-    });
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        addModal.classList.remove('add--open');
+      });
+    }
   }
 })();
 
@@ -117,9 +119,11 @@
     });
 
     // закрыть крестиком
-    closeBtn.addEventListener('click', function () {
-      loginModal.classList.remove('login--open');
-    });
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        loginModal.classList.remove('login--open');
+      });
+    }
 
     // запись email при отправке
     if (loginForm) {
@@ -185,7 +189,7 @@
       el: '.swiper-pagination',
       clickable: true,
       renderBullet: function renderBullet(index, className) {
-        return '<span class=\''.concat(className, '\'>').concat(index + 1, '</span>');
+        return '<li class=\''.concat(className, '\'>').concat(index + 1, '</li>');
       }
     },
     lazy: {
@@ -198,7 +202,7 @@
         pagination: {
           type: 'fraction',
           renderFraction: function renderFraction(currentClass, totalClass, index, total) {
-            return '<span class=\''.concat(currentClass, '\' type=\'button\'>0').concat(index, '</span> of <span class=\'').concat(totalClass, '\' type=\'button\'>0').concat(total, '</span>');
+            return '<li class=\''.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li class=\'').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
           }
         }
       },

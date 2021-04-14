@@ -61,12 +61,12 @@
     border-left: 2px solid $accent;
     transition: 0.1s ease;
   }
+}
 
-  &.active::after {
-    border: none;
-    border-top: 2px solid $accent;
-    border-right: 2px solid $accent;
-  }
+.faq__item h3.active::after {
+  border: none;
+  border-top: 2px solid $accent;
+  border-right: 2px solid $accent;
 }
 
 .faq__item p {
