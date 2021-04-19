@@ -23,7 +23,7 @@ body,
 *::before,
 *::after {
   box-sizing: border-box;
-  outline-color: $accent;
+  // outline-color: $accent;
 }
 
 img {
@@ -38,4 +38,8 @@ svg {
 
 main {
   flex-grow: 1;
+}
+
+.js-noscroll {
+  overflow: hidden;
 }

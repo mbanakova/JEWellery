@@ -35,6 +35,10 @@
   background-color: $white;
 }
 
+.add__container .header__logo {
+  margin: 0 auto 40px;
+}
+
 .add__container h2 {
   @include font(2.6rem, 130%, 700);
   @include fields();
@@ -52,6 +56,7 @@
   background-color: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 
   &::before,
   &::after {
@@ -98,13 +103,18 @@
   align-items: center;
 }
 
+.add__item-counter span {
+  margin-top: 10px;
+}
+
 .add__counter {
   width: 24px;
   height: 24px;
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
   padding: 0;
   position: relative;
+  cursor: pointer;
 
   &::before,
   &::after {
@@ -114,7 +124,7 @@
     height: 2px;
     background-color: $grey;
     top: 50%;
-    right: 2px;
+    right: 1px;
   }
 
   &::after {
@@ -124,6 +134,10 @@
 
   &--minus::after {
     display: none;
+  }
+
+  &:hover {
+    border: 1px solid $accent;
   }
 }
 
@@ -201,6 +215,12 @@
     background-color: $white;
   }
 
+  .add__container h2 {
+    @include font(2.4rem, 120%, 700);
+    padding: 0 25px;
+    margin-bottom: 30px;
+  }
+
   .add__img {
     width: 70px;
   }
@@ -211,6 +231,10 @@
     gap: 20px;
     padding-bottom: 30px;
     margin-bottom: 25px;
+  }
+
+  .add__item-text h3 {
+    @include font(1.6rem, 130%, 700);
   }
 
   .add__info {

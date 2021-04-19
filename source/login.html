@@ -51,6 +51,13 @@
     <title>Chjewellery</title>
   </head>
   <body class="body">
+    <div class="header__top header__top--nojs">
+      <a class="header__logo" href="index.html">
+        <svg width="66" height="66" role="img" aria-label="Логотип">
+          <use xlink:href="img/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
+    </div>
     <section class="login login--open">
       <div class="login__overlay">
         <div class="login__container">
@@ -69,6 +76,7 @@
                 alt="Earrings"
             /></picture>
           </div>
+
           <form
             class="login__form"
             action="https://echo.htmlacademy.ru"
@@ -81,7 +89,6 @@
                 type="email"
                 name="user-email"
                 id="user-email"
-                tabindex="1"
                 required
                 placeholder="Your E-mail"
               />
@@ -94,7 +101,6 @@
                 type="password"
                 name="user-password"
                 id="user-password"
-                tabindex="2"
                 required
                 placeholder="Password"
               />
@@ -110,7 +116,5 @@
         </div>
       </div>
     </section>
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>

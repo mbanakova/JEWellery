@@ -41,6 +41,8 @@
 
 @media (max-width: $desktop) {
   .card__img-wrap {
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
 }

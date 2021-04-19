@@ -15,6 +15,13 @@
     <title>Chjewellery</title>
   </head>
   <body class="body">
+    <div class="header__top header__top--nojs">
+      <a class="header__logo" href="index.html">
+        <svg width="66" height="66" role="img" aria-label="Логотип">
+          <use xlink:href="img/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
+    </div>
     <section class="login login--open">
       <div class="login__overlay">
         <div class="login__container">
@@ -26,16 +33,17 @@
               <!-- 1х: 430px; 2x: 860px -->
               <img src="img/login.png" srcset="img/login.png 430w, img/login@2.png 860w" sizes="(max-width: 767px) 270px, (max-width: 1023px) 442px, 430px" alt="Earrings"></picture>
           </div>
+
           <form class="login__form" action="https://echo.htmlacademy.ru" method="POST" id="modal-form">
             <h2>Log in</h2>
             <div class="login__input login__input--email">
-              <input type="email" name="user-email" id="user-email" tabindex="1" required="" placeholder="Your E-mail">
+              <input type="email" name="user-email" id="user-email" required="" placeholder="Your E-mail">
               <label for="user-email" aria-label="Your E-mail">
                 <!-- <span>Your E-mail</span> -->
               </label>
             </div>
             <div class="login__input login__input--password">
-              <input type="password" name="user-password" id="user-password" tabindex="2" required="" placeholder="Password">
+              <input type="password" name="user-password" id="user-password" required="" placeholder="Password">
               <label for="user-password" aria-label="password"></label>
             </div>
             <a class="login__remind" href="#">Forgot your password?</a>
@@ -48,7 +56,5 @@
         </div>
       </div>
     </section>
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>

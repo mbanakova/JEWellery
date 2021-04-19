@@ -69,7 +69,7 @@
             <input type="text" id="search" placeholder="Type here to search" />
             <label class="visually-hidden" for="search">Search</label>
           </form>
-          <a href="#" class="header__logo">
+          <a class="header__logo">
             <svg width="66" height="66" role="img" aria-label="Логотип">
               <use xlink:href="img/sprite.svg#icon-logo"></use>
             </svg>
@@ -907,7 +907,6 @@
             type="button"
             aria-label="close modal"
             id="login-close"
-            tabindex="6"
           ></button>
           <div class="login__img">
             <picture>
@@ -935,9 +934,9 @@
                 type="email"
                 name="user-email"
                 id="user-email"
-                tabindex="1"
                 required
                 placeholder="Your E-mail"
+                tabindex="0"
               />
               <label for="user-email" aria-label="Your E-mail"></label>
             </div>
@@ -946,17 +945,19 @@
                 type="password"
                 name="user-password"
                 id="user-password"
-                tabindex="2"
                 required
                 placeholder="Password"
+                tabindex="0"
               />
               <label for="user-password" aria-label="password"></label>
             </div>
-            <a class="login__remind" href="#">Forgot your password?</a>
-            <button type="submit" tabindex="5">Log in</button>
+            <a class="login__remind" href="#" tabindex="0"
+              >Forgot your password?</a
+            >
+            <button type="submit" tabindex="0">Log in</button>
             <div class="login__bottom">
               <p>Don't have an account?</p>
-              <a class="login__sign-up" href="#">Sign up</a>
+              <a class="login__sign-up" href="#" tabindex="0">Sign up</a>
             </div>
           </form>
         </div>

@@ -42,8 +42,9 @@
   top: 10px;
   right: 10px;
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
   padding: 0;
+  cursor: pointer;
 
   &::before,
   &::after {
@@ -113,9 +114,8 @@
   width: 100%;
   height: 100%;
   font-family: $poppins;
-  border: 0;
-  outline: 0;
-  color: $grey;
+  border: 1px solid transparent;
+  color: $dark;
   background-color: transparent;
 
   &::placeholder {
@@ -140,14 +140,15 @@
   text-decoration: none;
   text-align: right;
   margin-bottom: 40px;
+  float: right;
 
   &:hover {
     color: $accent;
     transition: 0.2 ease-in;
   }
 
-  &:active {
-    color: $grey;
+  &:focus {
+    color: $accent;
     transition: 0.2 ease-in;
   }
 }

@@ -35,6 +35,7 @@
   width: 82%;
   top: 24px;
   left: 20px;
+  cursor: pointer;
 
   &::after {
     position: absolute;
@@ -75,12 +76,17 @@
   &:checked + label::before {
     background-color: $accent;
   }
+
+  &:focus + label::before {
+    outline: 2px solid $brown;
+  }
 }
 
 .filter__item label {
   @include font(15px, 15px, 400);
   position: relative;
   padding-left: 26px;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -129,6 +135,10 @@
   background-color: $accent;
   border: none;
   cursor: pointer;
+
+  &:focus {
+    outline: 2px solid $brown;
+  }
 }
 
 .filter__range-button-1 {
@@ -157,6 +167,10 @@
   font-family: $poppins;
   color: $dark;
   border: none;
+
+  &:focus {
+    outline: 2px solid $brown;
+  }
 }
 
 .filter button[type="submit"],
@@ -180,6 +194,10 @@
   &:active {
     background-color: rgba($accent, 0.7);
     transition: 0.2 ease-in;
+  }
+
+  &:focus {
+    outline: 2px solid $brown;
   }
 }
 

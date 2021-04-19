@@ -8,9 +8,9 @@
 }
 
 .header__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-column-gap: 40px;
   padding-bottom: 18px;
   position: relative;
 
@@ -22,6 +22,13 @@
     transform: translateX(-50%);
     height: 1px;
     background-color: $pale;
+  }
+
+  &--nojs {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
   }
 }
 
@@ -79,13 +86,10 @@
   color: $grey;
 }
 
-.header__logo {
-  margin-right: 90px;
-}
-
 .header__user {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
@@ -255,10 +259,6 @@
 
   .header__form span {
     display: none;
-  }
-
-  .header__logo {
-    margin-right: 0;
   }
 
   .header__logo svg {
