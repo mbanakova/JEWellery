@@ -5,7 +5,7 @@
   var filterToggle = document.querySelector(".catalog__button");
   var filterClose = document.querySelector(".filter__close");
   var fieldsets = document.querySelectorAll("fieldset");
-  var filterParams = document.querySelectorAll(".filter__toggle");
+  var filterParams = document.querySelectorAll();
 
   if (filter) {
     filter.classList.add("catalog__filter-wrap--js");
@@ -25,17 +25,10 @@
     });
   }
 
-  // if (fieldsets) {
-  //   fieldsets.forEach(function (fieldset) {
-  //     fieldset.classList.add("js-toggle");
-  //   });
-  // }
-
-  if (filterParams) {
-    filterParams.forEach(function (button) {
-      button.addEventListener("click", function () {
-        button.classList.toggle("filter__toggle--open");
-      });
+  console.log(fieldsets);
+  if (fieldsets) {
+    fieldsets.forEach(fieldset, function () {
+      fieldset.classList.add("js-toggle");
     });
   }
 })();

@@ -7,7 +7,7 @@ body {
   @include fields();
   position: relative;
   min-width: $mobile;
-  min-height: 100vh;
+  // min-height: 100vh;
   margin: 0 auto;
   font-family: $poppins;
   background-color: $white;

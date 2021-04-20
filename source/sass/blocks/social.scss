@@ -36,9 +36,12 @@
 }
 
 @media (max-width: $tablet) {
-  .social {
-    margin-left: -2px;
-    gap: 27px;
+  .social__item {
+    margin-right: 27px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
   .social__link svg {

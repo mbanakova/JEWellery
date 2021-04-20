@@ -148,23 +148,29 @@
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 100;
+      min-width: 100%;
       background-color: $accent;
+      z-index: 100;
       color: $white;
+      min-height: 760px;
     }
 
     &--close {
       position: static;
       background-color: $accent;
       color: $white;
-      height: 100vh;
     }
   }
 
   .header--js .header__burger {
     display: block;
+  }
+
+  .header--js .header__bottom {
+    position: relative;
+    background-color: #a87b62;
+    color: #fff;
+    padding-bottom: 20px;
   }
 
   .header--close.header {
@@ -203,8 +209,8 @@
   }
 
   .header__bottom {
-    position: absolute;
-    top: 160px;
+    position: relative;
+    top: 80px;
 
     &--card::after {
       display: none;
@@ -305,10 +311,18 @@
   .header {
     padding-top: 20px;
     padding-bottom: 10px;
+
+    &--js {
+      min-height: 700px;
+    }
   }
 
   .header--close.header {
     height: 92px;
+  }
+
+  .header__bottom {
+    top: 100px;
   }
 
   .header__logo svg {
