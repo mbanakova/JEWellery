@@ -30,7 +30,7 @@
         pagination: {
           type: 'fraction',
           renderFraction: function renderFraction(currentClass, totalClass, index, total) {
-            return '<li class=\''.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li class=\'').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
+            return '<li class=\''.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li~npm test class=\'').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
           }
         }
       },

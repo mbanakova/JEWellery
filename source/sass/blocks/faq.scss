@@ -75,9 +75,12 @@
   padding-right: 350px;
   padding-left: 7px;
   margin-bottom: 3px;
-  max-height: 0;
   overflow: hidden;
   transition: 0.1s ease max-height;
+}
+
+.js-hidden p {
+  max-height: 0;
 }
 
 @media (max-width: $desktop) {

@@ -148,11 +148,11 @@
 
 @media (max-width: $tablet) {
   .blog {
-    margin-bottom: 63px;
+    margin-bottom: 65px;
   }
 
   .blog__page-link {
-    margin-bottom: 54px;
+    margin-bottom: 56px;
   }
 
   .blog__item,
@@ -183,6 +183,10 @@
 
   .blog__article h3 {
     margin-bottom: 40px;
+  }
+
+  .blog__article time {
+    margin-bottom: 13px;
   }
 
   .blog__date {

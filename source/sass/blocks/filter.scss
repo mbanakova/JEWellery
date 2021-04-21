@@ -18,8 +18,7 @@
 }
 
 .filter fieldset {
-  padding: 0;
-  margin: 0;
+  @include ul();
   position: relative;
   border: 1px solid $accent;
   border-bottom: none;
@@ -27,7 +26,6 @@
   &:last-of-type {
     border-bottom: 1px solid $accent;
     margin-bottom: 35px;
-    // min-height: 150px;
   }
 }
 
@@ -38,16 +36,16 @@
   width: 100%;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 28px 23px;
+  padding: 24px 23px 20px;
   text-align-last: left;
   cursor: pointer;
 
   &::after {
     position: absolute;
     content: "";
-    top: 30px;
-    right: 28px;
-    transform: rotate(-45deg);
+    top: 33px;
+    right: 25px;
+    transform: rotate(-225deg);
     width: 11px;
     height: 11px;
     border-bottom: 2px solid $accent;
@@ -56,9 +54,9 @@
   }
 
   &--open::after {
-    transform: rotate(-225deg);
+    transform: rotate(-45deg);
     background-color: transparent;
-    top: 36px;
+    top: 28px;
   }
 }
 
@@ -74,7 +72,7 @@
 
 .filter__group {
   @include ul();
-  padding: 2px 28px 30px;
+  padding: 2px 25px 25px;
   margin-left: 10px;
   display: flex;
   flex-direction: column;
@@ -103,6 +101,7 @@
   position: relative;
   padding-left: 26px;
   cursor: pointer;
+  border: none;
 
   &::before {
     position: absolute;
@@ -130,10 +129,11 @@
   position: relative;
   height: 2px;
   background-color: $accent;
+  margin-bottom: 15px;
 }
 
 .filter__range-wrapper {
-  min-height: 80px;
+  min-height: 54px;
   padding: 0 20px;
 }
 
@@ -141,40 +141,45 @@
   width: 100%;
   height: 2px;
   background-color: $accent;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.filter__btn-wrap {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 30px;
+  vertical-align: middle;
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+
+  &:first-of-type {
+    left: 30px;
+  }
+
+  &:last-of-type {
+    left: unset;
+    right: 10px;
+  }
 }
 
 .filter__range-button-1,
 .filter__range-button-2 {
-  position: absolute;
-  content: "";
-  top: 50%;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: $accent;
   border: none;
   cursor: pointer;
+  grid-column-start: 1;
+  grid-column-end: 3;
 
   &:focus {
     outline: 2px solid $brown;
   }
-}
-
-.filter__range-button-1 {
-  left: 20%;
-}
-
-.filter__range-button-2 {
-  right: 20%;
-}
-
-.filter__range-num {
-  display: flex;
-  justify-content: space-between;
-  width: 140px;
-  margin: 0 auto;
 }
 
 .filter__range-num span {
@@ -183,7 +188,7 @@
   color: $dark;
 }
 
-.filter__range-num input {
+.filter__btn-wrap input[type="number"] {
   @include font(14px, 18px, 500);
   font-family: $poppins;
   color: $dark;
@@ -197,7 +202,7 @@
 .filter button[type="submit"],
 .filter button[type="reset"] {
   @include font(16px, 130%, 500);
-  padding: 28px;
+  padding: 23px 28px 24px;
   border: none;
   font-family: $poppins;
   display: block;
@@ -245,15 +250,103 @@
   }
 
   .filter fieldset {
-    padding: 70px 25px 28px;
     position: relative;
     border: none;
     border-bottom: 1px solid $accent;
+  }
+
+  .filter__toggle {
+    @include font(1.8rem, 130%, 500);
+    color: $dark;
+    font-family: $poppins;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 34px 20px 20px;
+    text-align-last: left;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 44px;
+      right: 40px;
+      transform: rotate(-225deg);
+      width: 18px;
+      height: 18px;
+      border-bottom: 2px solid $accent;
+      border-left: 2px solid $accent;
+      transition: 0.1s ease;
+    }
+
+    &--open::after {
+      transform: rotate(-45deg);
+      background-color: transparent;
+      top: 28px;
+    }
+  }
+
+  .filter__item label {
+    @include font(15px, 15px, 400);
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+      left: 8px;
+    }
+  }
+
+  .filter__group {
+    gap: 18px;
+    margin-left: 0;
+    padding-bottom: 38px;
+  }
+
+  .filter__range-between {
+    margin-bottom: 25px;
+  }
+
+  .filter__range-num {
+    margin-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .filter button[type="submit"],
+  .filter button[type="reset"] {
+    margin-right: 40px;
   }
 }
 
 @media (max-width: $tablet) {
   .filter {
-    max-width: 270px;
+    padding: 0 25px;
+    width: 100%;
+  }
+
+  .filter__close {
+    right: 16px;
+    top: -4px;
+  }
+
+  .filter__toggle {
+    padding-left: 20px;
+
+    &::after {
+      width: 15px;
+      height: 15px;
+      right: 20px;
+    }
+  }
+
+  .filter__group {
+    padding: 2px 10px 30px;
+  }
+
+  .filter button[type="submit"],
+  .filter button[type="reset"] {
+    margin-right: 25px;
   }
 }

@@ -17,6 +17,7 @@
 
     if (items.length > 0) {
       items.forEach(function (item) {
+        item.classList.add('js-hidden');
         item.addEventListener('click', function () {
           var title = item.querySelector('h3');
           var height = title.nextElementSibling.scrollHeight;

@@ -149,7 +149,7 @@
                 Close
               </button>
               <fieldset>
-                <button class="filter__toggle" type="button">Products</button>
+                <button class="filter__toggle" type="button">Product</button>
                 <ul class="filter__group js-toggle">
                   <li class="filter__item">
                     <input
@@ -243,17 +243,12 @@
                 <div class="filter__range-wrapper js-toggle">
                   <div class="filter__range" id="range-box">
                     <div class="filter__range-between" id="range-ruler"></div>
-                    <button
-                      class="filter__range-button-1"
-                      type="button"
-                      id="range-left-button"
-                    ></button>
-                    <button
-                      class="filter__range-button-2"
-                      type="button"
-                      id="range-right-button"
-                    ></button>
-                    <div class="filter__range-num">
+                    <div class="filter__btn-wrap">
+                      <button
+                        class="filter__range-button-1"
+                        type="button"
+                        id="range-left-button"
+                      ></button>
                       <span>$&nbsp;</span>
                       <input
                         type="number"
@@ -265,6 +260,13 @@
                       <label for="range-left-cell" class="visually-hidden"
                         >Min price</label
                       >
+                    </div>
+                    <div class="filter__btn-wrap">
+                      <button
+                        class="filter__range-button-2"
+                        type="button"
+                        id="range-right-button"
+                      ></button>
                       <span>$&nbsp;</span
                       ><input
                         type="number"
